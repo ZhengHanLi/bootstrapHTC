@@ -1,0 +1,223 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta chatset="utf-8">
+		<link rel="shortcut icon" href="htc.png"> <!-- 網頁標籤上出現的icon圖示-->
+		<title>HTC 台灣</title> 
+		<link rel="stylesheet" href="style.css">
+		<script>
+			var index=0;
+
+			setInterval("change()",3000);
+			function change(){
+
+				var imgs = document.getElementsByClassName("smallPic");
+				var bigImg = document.getElementById("bigPic");
+
+				index++;
+				if ( index == imgs.length ) index = 0;
+
+				bigImg.setAttribute("src",imgs[index].getAttribute("src"));
+			}
+		</script>
+		<script src="external/jquery/jquery.js"></script>
+
+		<script>
+			$(function () {
+			  $(window).scroll(function () {
+			    var scrollVal = $(this).scrollTop();
+			    //console.log( $(".search").css("display"));
+
+			    if ( scrollVal > 20 ){
+			    	$(".wrap").css("position","fixed").css("background-color","white");
+			    	$(".header").css("height","50px");
+			    	$(".search").css("display","none");
+			    	$(".menu").css("height","15px");
+
+			    }
+			    else{
+			    	$(".wrap").css("position","static");
+			    	$(".header").css("height","100px");
+			    	$(".search").css("display","block");
+			    	$(".header > a").css("height","20px");
+			    }
+			 	
+			  });
+
+
+			  $(".menu li:nth-child(2)").mouseenter(function(){
+			  	$(".downbar").slideDown("slow");
+			  })
+
+
+			  $(".downbar").mouseleave(function(){
+			  	$(".downbar").slideToggle();
+			  })
+			});
+		</script>
+	</head>
+	<body>
+		
+		<div class="wrap">
+			<div class="header">
+				<a href="http://www.htc.com/tw/"><img src="htc.png" ></a>
+				<div class="bar">
+					<ul>
+						<li><a href="http://www.htc.com/tw/contact/chat/">線上客服</a></li>
+						<li><a href="http://www.htc.com/tw/support/htc-service-center.html">幫助中心</a></li>
+						<li><a href="http://www.htc.com/tw/support/">支援服務</a></li>
+						<li><a href="">註冊</a></li>
+					</ul>
+				</div>
+
+				<div class="search">
+					<img src="search.png" ><input type="text" placeholder="搜尋" id="area1">
+				</div>
+
+				<div class="menu">
+					<ul>
+						<li><a href="http://estore.htc.com/tw/buy/zh-TW/shop/allCategories" target="_blank">網路商店</a></li>
+						<li><a href="">產品</a></li>
+						<li><a href="https://www.vive.com/tw/">VIVE</a></li>
+						<li><a href="https://community.htc.com/tw/hero.php">HTC論壇</a></li>
+						<li><a href="http://www.htc.com/tw/buy/">HTC專賣店</a></li>
+						<li><a href="http://www.htc.com/tw/promotion/">焦點訊息</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="downbar">
+			<div class="wrapdownbar">
+				<div class="downleft">
+					<ul>
+						<li><a href="">_智慧型手機</a></li>
+						<li><a href="">_HTC RE</a></li>
+						<li><a href="">_VIVE</a></li>
+						<li><a href="">_健身</a></li>
+						<li><a href="">_配件</a></li>
+					</ul>
+				</div>
+				<div class="downright">
+					<ul>
+						<li>
+							<img src="U11.png">
+							<h5>HTC U11</h5>
+							<h5>壓一下 開啟你的想像</h5>
+						</li>
+						<li>
+							<img src="uultra.png">
+							<h5>HTC U Ultra</h5>
+							<h5>一切為你</h5>
+						</li>
+						<li>
+							<img src="uplay.png">
+							<h5>HTC U Play</h5>
+							<h5>多趣如妳</h5>
+						</li>
+						<li>
+							<img src="evo.png">
+							<h5>HTC 10 evo</h5>
+							<h5>聽見 屬於自己的聲音</h5>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="main">
+			<section class="thumbs">
+				<img id="bigPic" src="p1.png">
+				<img class="smallPic" src="p1.png">
+				<img class="smallPic" src="p2.png">
+				<img class="smallPic" src="p3.png">
+				<img class="smallPic" src="p4.png">
+				<img class="smallPic" src="p5.png">
+				<img class="smallPic" src="p6.png">
+				<img class="smallPic" src="p7.png">
+				<img class="smallPic" src="p8.png">				
+			</section>
+
+			<section class="ban">
+			 	<a href="http://www.htc.com/tw/u11-event/?utm_source=htc"><img src="new1.png"></a>
+			 	<a href="http://estore.htc.com/tw/buy/zh-TW/shop/o2ohtcu11event?storeId=10001&catalogId=10001&langId=-7&_ga=2.210420689.596789805.1497186952-2117776547.1463065740"><img src="new2.png"></a>
+			 	<iframe src="https://www.youtube.com/embed/ZPEaX1wtzeM" width="560" height="315"  allowfullscreen></iframe>
+			</section>
+
+			<section class="video">
+				<h1>壓一下 開啟你的想像</h1>
+				<table>
+					<tr>
+						<td><a href=""><img src="press1.png"></a></td>
+						<td><a href=""><img src="press2.png"></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="press3.png"></a></td>
+						<td><a href=""><img src="press4.png"></a></td>
+					</tr>
+				</table>
+				<a href="http://www.htc.com/tw/smartphones/htc-u11/"><span class="btn2">HTC U11</span></a>
+			</section>
+
+			<section class="buy">
+				<h1>立即購買，馬上擁有</h1>
+				<table >
+					<tr>
+						<td><a href="https://estore.htc.com/tw/buy/zh-TW/shop/htc-u-u11?_ga=2.268152778.596789805.1497186952-2117776547.1463065740">
+							<table>
+								<tr><td><img src="buy1.png"></td></tr>
+								<tr><td>HTC U11</td></tr>
+								<tr><td><span class="wrapButton">立即購買</span></td></tr>
+							</table>
+						</a></td>
+						<td><a href="http://estore.htc.com/tw/buy/zh-TW/shop/htc-u-ultra?_ga=2.243369665.596789805.1497186952-2117776547.1463065740">
+							<table>
+								<tr><td><img src="buy2.png"></td></tr>
+								<tr><td>HTC U Ultra</td></tr>
+								<tr><td><span class="wrapButton">立即購買</span></td></tr>
+							</table>
+						</a></td>
+						<td><a href="http://estore.htc.com/tw/buy/zh-TW/shop/htc-u-play?_ga=2.243369665.596789805.1497186952-2117776547.1463065740">
+							<table>
+								<tr><td><img src="buy3.png"></td></tr>
+								<tr><td>HTC U Play</td></tr>
+								<tr><td><span class="wrapButton">立即購買</span></td></tr>
+							</table>
+						</a></td>
+						<td><a href="http://estore.htc.com/tw/buy/zh-TW/shop/htc-10-evo?_ga=2.243369665.596789805.1497186952-2117776547.1463065740">
+							<table>
+								<tr><td><img src="buy4.png"></td></tr>
+								<tr><td>HTC 10 evo</td></tr>
+								<tr><td><span class="wrapButton">立即購買</span></td></tr>
+							</table>
+						</a></td>
+						<td><a href="http://estore.htc.com/tw/buy/zh-TW/shop/htc-one-10?_ga=2.243369665.596789805.1497186952-2117776547.1463065740">
+							<table>
+								<tr><td><img src="buy5.png"></td></tr>
+								<tr><td>HTC 10</td></tr>
+								<tr><td><span class="wrapButton">立即購買</span></td></tr>
+							</table>
+						</a></td>
+						<td><a href="http://estore.htc.com/tw/buy/zh-TW/shop/htc-desire-10-pro-dual-sim?_ga=2.243369665.596789805.1497186952-2117776547.1463065740">
+							<table>
+								<tr><td><img src="buy6.png"></td></tr>
+								<tr><td>HTC Desire 10 pro dual sim</td></tr>
+								<tr><td><span class="wrapButton">立即購買</span></td></tr>
+							</table>
+						</a></td>
+					</tr>
+
+				</table>
+
+				<a href="http://www.htc.com/tw/smartphones/"><span class="btn3">查看所有手機</span></a>
+			</section>
+		</div>
+
+
+	</body>
+
+
+
+
+</html>
