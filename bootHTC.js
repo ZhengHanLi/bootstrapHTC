@@ -13,10 +13,3 @@ function change() {
 }
 
 
-// footer 展開
-$(document).ready(function() {
-    $("#btnn").click(function() {
-        $("#footer").slideToggle("slow");
-        $("html,body").animate({ scrollTop: 5000 }, 500);
-    });
-});
